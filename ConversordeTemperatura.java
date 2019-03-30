@@ -1,4 +1,4 @@
-package exercíciosSimples;
+package exercÃ­ciosSimples;
 
 import java.util.Scanner;
 
@@ -10,8 +10,8 @@ public class ConversordeTemperatura {
 		Scanner variaveldeApoio = new Scanner(System.in);
 		int valorDigitadoEmFarenheit = variaveldeApoio.nextInt();
 		
-		int celsius = 5* ( valorDigitadoEmFarenheit - 32)/9;
-		System.out.println("A temperatura é de " + celsius + "°C");
+		int celsius = 5* (valorDigitadoEmFarenheit - 32)/9;
+		System.out.println("A temperatura Ã© de " + celsius + "Â°C");
 		variaveldeApoio.close();
 	
 	}
