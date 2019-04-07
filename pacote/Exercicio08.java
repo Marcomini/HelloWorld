@@ -1,6 +1,6 @@
 package pacote;
 
-import java.util.Scanner; //https://www.slideshare.net/loianeg/curso-java-basico-exercicios-aulas-14-15
+import java.util.Scanner;
 
 public class Exercicio08 {
 
@@ -20,21 +20,21 @@ public class Exercicio08 {
 		{
 			if (produto01 < produto03)
 			{
-				System.out.println("O primeiro produto no valor R$:" +produto01 +" é mais barato");
+				System.out.println("O primeiro produto no valor R$:" +produto01 +" Ã© mais barato");
 			}
 		}
 		if (produto02 < produto01)
 		{
 			if (produto02 < produto03)
 			{
-				System.out.println("O segundo produto no valor R$:" +produto02 +" é mais barato");
+				System.out.println("O segundo produto no valor R$:" +produto02 +" Ã© mais barato");
 			}
 		}
 		if (produto03 < produto01)
 		{
 			if (produto03 < produto02)
 			{
-				System.out.println("O terceiro produto no valor R$:" +produto03 +" é mais barato");
+				System.out.println("O terceiro produto no valor R$:" +produto03 +" Ã© mais barato");
 			}
 		}
 		scan.close();
