@@ -2,10 +2,9 @@ package br.modelo.jdbc;
 
 public class Cd {
 	int codigo;
-	String nomedoCd;
+	String nomedocd;
 	String genero;
 	String artista;
-	
 	
 	public int getCodigo() {
 		return codigo;
@@ -13,11 +12,11 @@ public class Cd {
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
-	public String getNomedoCd() {
-		return nomedoCd;
+	public String getNomedocd() {
+		return nomedocd;
 	}
-	public void setNomedoCd(String nomedoCd) {
-		this.nomedoCd = nomedoCd;
+	public void setNomedocd(String nomedocd) {
+		this.nomedocd = nomedocd;
 	}
 	public String getGenero() {
 		return genero;
@@ -32,5 +31,4 @@ public class Cd {
 		this.artista = artista;
 	}
 
-		
 }
