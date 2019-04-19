@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 public class MostrarTudo {
 
-	public static void main(String[] args) {
+	public static void mostrando() {
 		ArrayList<Cd> variavel1 = new ArrayList<Cd>();
 		Connection con = Conexao.receberConexao();
-		String sql = "SELECT * FROM usuario";
+		String sql = "SELECT * FROM tabelacd";
 		try {
 			java.sql.PreparedStatement preparador = con.prepareStatement(sql);
 			ResultSet resultado = preparador.executeQuery();
@@ -18,10 +18,10 @@ public class MostrarTudo {
 			while (resultado.next()) {
 
 				Cd cd = new Cd();
-				cd.setCodigo(resultado.getInt("codigo:"));
-				cd.setNomedocd(resultado.getString("Disco:"));
-				cd.setGenero(resultado.getString("Genêro:"));
-				cd.setArtista(resultado.getString("Artista:"));
+				cd.setCodigo(resultado.getInt("codigo"));
+				cd.setNomedocd(resultado.getString("nomedocd"));
+				cd.setGenero(resultado.getString("genero"));
+				cd.setArtista(resultado.getString("artista"));
 
 				variavel1.add(cd);
 			}
