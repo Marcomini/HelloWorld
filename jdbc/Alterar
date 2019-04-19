@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import br.modelo.jdbc.Cd;
 
 public class Alterar {
-	public static void alterando (Cd testecd){
+	public static void alterando(Cd testecd) {
 
 		Connection con = Conexao.receberConexao();
 		String sql = "Update tabelacd set nomedocd = ?,genero= ?, artista= ? where codigo = ?";
@@ -32,7 +32,3 @@ public class Alterar {
 		}
 	}
 }
-
-	
-
-
