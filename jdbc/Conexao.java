@@ -11,8 +11,7 @@ public class Conexao {
 		Connection con = null;
 		try {
 
-			con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/bancocd", "root", "");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bancocd?useSSL=false", "root", "");
 			System.out.println("Conectado com sucesso!");
 		} catch (SQLException e) {
 			e.printStackTrace();
