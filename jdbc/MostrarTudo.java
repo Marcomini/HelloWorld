@@ -1,39 +1,31 @@
 package br.modelo.jdbc;
 
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.sql.PreparedStatement;
 
-public class MostrarTudo {
 
-	public static void mostrando() {
-		ArrayList<Cd> variavel1 = new ArrayList<Cd>();
+public class Remover {
+
+	public static void removendo(int codigo) {
 		Connection con = Conexao.receberConexao();
-		String sql = "SELECT * FROM tabelacd";
+		String sql = "DELETE from tabelacd where codigo = ?";
+
 		try {
-			java.sql.PreparedStatement preparador = con.prepareStatement(sql);
-			ResultSet resultado = preparador.executeQuery();
+			PreparedStatement preparador = con.prepareStatement(sql);
+			preparador.setInt(1,codigo);
+			
+			preparador.execute();
+			preparador.close();
+			System.out.println("Excluido");
+		}
 
-			while (resultado.next()) {
+		catch
 
-				Cd cd = new Cd();
-				cd.setCodigo(resultado.getInt("codigo"));
-				cd.setNomedocd(resultado.getString("nomedocd"));
-				cd.setGenero(resultado.getString("genero"));
-				cd.setArtista(resultado.getString("artista"));
-
-				variavel1.add(cd);
-			}
-			for (Cd variavel2 : variavel1) {
-
-				System.out.println("Código:" + variavel2.getCodigo());
-				System.out.println("Disco:" + variavel2.getNomedocd());
-				System.out.println("Genêro:" + variavel2.getGenero());
-				System.out.println("Artista:" + variavel2.getArtista());
-			}
-		} catch (SQLException e) {
+		(SQLException e) {
 			e.printStackTrace();
+			System.err.println("Erro ao excluir");
+
 		}
 	}
 }
