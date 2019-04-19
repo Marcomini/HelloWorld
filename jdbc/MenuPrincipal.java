@@ -45,6 +45,7 @@ public class MenuPrincipal {
 						case 2:
 							
 							System.out.println("ALTERAR CD");
+							
 							System.out.println("Código:");
 							cd.setCodigo (leitor.nextInt());
 							System.out.println("Disco: ");
