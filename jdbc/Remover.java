@@ -2,18 +2,19 @@ package br.modelo.jdbc;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.PreparedStatement;
 
-import com.mysql.jdbc.PreparedStatement;
 
 public class Remover {
 
-	public static void main(String[] args) {
+	public static void removendo(int codigo) {
 		Connection con = Conexao.receberConexao();
-		String sql = "DELETE from tabelacd where codigo = 0";
+		String sql = "DELETE from tabelacd where codigo = ?";
 
 		try {
-			PreparedStatement preparador = (PreparedStatement) con
-					.prepareStatement(sql);
+			PreparedStatement preparador = con.prepareStatement(sql);
+			preparador.setInt(1,codigo);
+			
 			preparador.execute();
 			preparador.close();
 			System.out.println("Excluido");
